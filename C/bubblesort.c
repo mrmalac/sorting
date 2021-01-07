@@ -5,10 +5,9 @@
 	#define true ((bool)1)
 	#define false ((bool)0)
 #endif
-
-
-int size = 20;
-int arr[20] = {223, 63, 43, 23, 1, 55, 26, 362, 24562, 14, 5, 6, 46, 75, 73, 65, 42, 54, 657, 85};
+#ifndef __cplusplus
+extern "C" {
+#endif
 
 int sort(int arr[], int size) {
 	bool isSorted = false;
@@ -27,7 +26,6 @@ int sort(int arr[], int size) {
 			}
 		}
 		if (hadToFlip == false) {
-			printf("Sorted Array: ");
 			for (int x = 0; x<size; x++) {
 				printf("%d", arr[x]);
 				printf(" ");
@@ -41,7 +39,6 @@ int sort(int arr[], int size) {
 	return 0;
 }
 
-int main() {
-	int asd = sort(arr, size);
-	return 0;
+#ifndef __cplusplus
 }
+#endif
