@@ -5,6 +5,7 @@
 	#define true ((bool)1)
 	#define false ((bool)0)
 #endif
+
 #ifndef __cplusplus
 extern "C" {
 #endif
