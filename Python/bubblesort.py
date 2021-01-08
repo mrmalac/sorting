@@ -1,11 +1,10 @@
-arr = input().split(" ")
-if len(arr) == 1:
-	print("I can't sort this")
-	quit()
-for i in range(len(arr)):
-	arr[i] = int(arr[i])
-
 def sort(arr):
+	if len(arr) == 1:
+		print("I can't sort this")
+		raise ValueError("Cannot sort an array with only one number")
+	if not isinstance(arr[0], int):
+		for i in range(len(arr)):
+			arr[i] = int(arr[i])
 	isSorted = False
 	while isSorted == False:
 		hadToFlip = False
@@ -28,5 +27,3 @@ def sort(arr):
 		if hadToFlip == False:
 			print(arr)
 			isSorted = True
-
-						
